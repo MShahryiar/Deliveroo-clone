@@ -54,11 +54,12 @@ const Home = () => {
         >
           <Categories/>
 
-          <FeaturedRow
+           <FeaturedRow
             id="F1"
             title="Featured"
             description="Paid placements from our partners"
           />
+          
           <FeaturedRow
             id="T2"
             title="Tasty Discounts"

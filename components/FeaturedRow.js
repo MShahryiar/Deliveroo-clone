@@ -20,13 +20,13 @@ const FeaturedRow = ({id,title, description}) => {
       showsHorizontalScrollIndicator={false}
       className="pt-4"
     >
-        {/* Restaurant Card */}\
+        {/* Restaurant Card */}
         <RestaurantCard 
-          id="1" 
-          imgUrl="imgSrc"
-          title="Fake Taxi"
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo Sushi"
           rating="4.3"
-          genre="Italian"
+          genre="Japanese"
           address="park lane"
           short_description="Pizza"
           dishes={[]}
