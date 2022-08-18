@@ -5,7 +5,7 @@ import { LocationMarkerIcon, StarIcon } from 'react-native-heroicons/outline'
 const RestaurantCard = ({id, imgUrl, title, rating, genre, address, short_description, dishes, long, lat}) => {
     
   return (
-    <TouchableOpacity>
+    <TouchableOpacity className="bg-white mr-3 shadow-sm">
       <Image
         source={{
           uri:imgUrl,

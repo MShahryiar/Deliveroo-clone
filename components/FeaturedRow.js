@@ -33,6 +33,66 @@ const FeaturedRow = ({id,title, description}) => {
           long="124"
           lat="155"
         />
+        <RestaurantCard 
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo Sushi"
+          rating="4.3"
+          genre="Japanese"
+          address="park lane"
+          short_description="Pizza"
+          dishes={[]}
+          long="124"
+          lat="155"
+        />
+        <RestaurantCard 
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo Sushi"
+          rating="4.3"
+          genre="Japanese"
+          address="park lane"
+          short_description="Pizza"
+          dishes={[]}
+          long="124"
+          lat="155"
+        />
+        <RestaurantCard 
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo Sushi"
+          rating="4.3"
+          genre="Japanese"
+          address="park lane"
+          short_description="Pizza"
+          dishes={[]}
+          long="124"
+          lat="155"
+        />
+        <RestaurantCard 
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo Sushi"
+          rating="4.3"
+          genre="Japanese"
+          address="park lane"
+          short_description="Pizza"
+          dishes={[]}
+          long="124"
+          lat="155"
+        />
+        <RestaurantCard 
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo Sushi"
+          rating="4.3"
+          genre="Japanese"
+          address="park lane"
+          short_description="Pizza"
+          dishes={[]}
+          long="124"
+          lat="155"
+        />
     </ScrollView>
 
 
