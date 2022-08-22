@@ -67,12 +67,16 @@ const Home = () => {
           }}
         >
           <Categories/>
-
-           <FeaturedRow
-            id="F1"
-            title="Featured"
-            description="Paid placements from our partners"
-          />
+            {featuredCategories?.map((category)=>(
+              <FeaturedRow
+                key={category._id}
+                id={category._id}
+                title={category.name}
+                description={category.short_description}
+              />
+            )
+          
+          )}
           
           <FeaturedRow
             id="T2"
