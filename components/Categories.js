@@ -15,7 +15,7 @@ export default function Categories() {
       setCategories(data)
     })
   },[])
-  console.log(categories)
+  // console.log(categories)
 
 
 
@@ -31,14 +31,10 @@ export default function Categories() {
       {categories.map((category)=>(
          <CatCard
           key={category._id}
-          imgUrl="https://links.papareact.com/gn7" 
+          imgUrl={category.image}
           title={category.name}/>
       ))}
-      {/* <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/>
-      <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/>
-      <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/>
-      <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/>
-      <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/> */}
+     
 
     </ScrollView>
   )
@@ -51,3 +47,10 @@ export default function Categories() {
 //   title={category.name}/>
 
 // ))}
+
+
+ {/* <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/>
+      <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/>
+      <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/>
+      <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/>
+      <CatCard imgUrl="https://links.papareact.com/gn7" title="Testing"/> */}
