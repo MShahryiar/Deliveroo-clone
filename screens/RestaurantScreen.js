@@ -4,6 +4,7 @@ import { urlFor } from '../sanity'
 import {ArrowLeftIcon, ChevronRightIcon, LocationMarkerIcon , StarIcon} from "react-native-heroicons/solid";
 import {QuestionMarkCircleIcon} from "react-native-heroicons/outline";
 import DishRow from '../components/DishRow';
+import BasketIcon from '../components/BasketIcon';
 
 
 const RestaurantScreen = ({route, navigation}) => {
@@ -16,6 +17,8 @@ const RestaurantScreen = ({route, navigation}) => {
       },[])
 
   return (
+    <>
+    <BasketIcon/>
     <ScrollView>
         <View className="relative">
         <Image
@@ -56,7 +59,7 @@ const RestaurantScreen = ({route, navigation}) => {
                 <ChevronRightIcon color="#00CCBB" size={20} opacity={1} />
         </TouchableOpacity>
         </View>
-        <View>
+        <View className="pb-10">
             <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
             {dishes.map((dish)=>(
                 <DishRow
@@ -71,6 +74,7 @@ const RestaurantScreen = ({route, navigation}) => {
         </View>
 
     </ScrollView>
+    </>
   )
 }
 
