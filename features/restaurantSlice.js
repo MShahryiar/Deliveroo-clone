@@ -13,36 +13,18 @@ const initialState={
     }
 }
 
-export const basketSlice = createSlice({
-    name:'basket',
+export const restaurantSlice = createSlice({
+    name:'restaurant',
     initialState,
     reducers:{
-        addToBasket: (state,action)=>{
-            state.items = [...state.items, action.payload];
-        },
-        removeFromBasket: (state, action) =>{
-            const index = state.items.findIndex((item)=> item.id === action.payload.id);
-
-            let newBasket = [...state.items];
-
-            if (index >= 0) {
-                newBasket.splice(index, 1)
-            }else{
-                console.warn(
-                    `Can't remove product (id:${action.payload.id}) as its not in basket`
-                );
-            }
-            state.items = newBasket;
-        },
+        setRestaurant: (state,action) => {
+                state.restaurant = action.payload
+        }
     },
 })
 
-export const {addToBasket, removeFromBasket} = basketSlice.actions
+export const {setRestaurant} = restaurantSlice.actions
 
-export const selectBasketItems = (state) => state.basket.items;
+export const selectRestaurant = (state) => state.restaurant.restaurant;
 
-export const selectBasketItemsWithID = (state, id) => state.basket.items.filter((item) => item.id === id);
-
-export const selectBasketTotal = (state) => state.basket.items.reduce((total, item) => total += item.price, 0)
-
-export default basketSlice.reducer
+export default restaurantSlice.reducer
