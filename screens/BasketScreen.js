@@ -1,10 +1,11 @@
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRestaurant } from '../features/restaurantSlice';
-import { selectBasketItems } from '../features/basketSlice';
+import { removeFromBasket, selectBasketItems } from '../features/basketSlice';
 import { XCircleIcon } from 'react-native-heroicons/solid';
+import { urlFor } from '../sanity'
 
 const BasketScreen = () => {
   const navigation = useNavigation();
@@ -44,8 +45,28 @@ const BasketScreen = () => {
           className="h-7 w-7 bg-gray-300 p-4 rounded-full"
         /> 
         <Text className="flex-1">Deliver in 50-75 mins</Text>
-        <TouchableOpacity><Text className="text-[#00CCBB] font-bold">Change</Text></TouchableOpacity>
+        <TouchableOpacity><Text className="text-[#4c928d] font-bold">Change</Text></TouchableOpacity>
       </View>
+      <ScrollView className="divide-y divide-gray-300">
+          {Object.entries(groupedItemsInBasket).map(([key, items])=> (
+            <View key={key} className="flex-row items-center space-x-3 bg-white py-2 px-5">
+                <Text className="text-[#00CCBB]">{items.length} x </Text>
+                <Image
+                  source={{
+                    uri:"https://links.papareact.com/gn7"
+                  }}
+                  className="h-12 w-12 rounded-full"
+                />
+                <Text className="flex-1">{items[0]?.name}</Text>
+                <Text className="text-gray-600 font-bold">
+                  {items[0]?.price }
+                </Text>
+                <TouchableOpacity onPress={()=>dispatch(removeFromBasket({id:key}))}>
+                  <Text className="font-bold text-[#00CCBB]">Remove</Text>
+                </TouchableOpacity>
+            </View>
+          ))}
+      </ScrollView>
       
     </View>
   )
