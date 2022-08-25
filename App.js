@@ -20,7 +20,7 @@ export default function App() {
               <Stack.Screen name='Home' component={Home}/>
               <Stack.Screen name='Restaurant' component={RestaurantScreen}/>
               <Stack.Screen name='Basket' component={BasketScreen}
-                options={{presentation:"modal", headerShown:false}}
+                options={{headerShown:false}}
               />
             </Stack.Navigator>
           </Provider>
