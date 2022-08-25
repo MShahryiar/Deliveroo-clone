@@ -1,9 +1,20 @@
 import { View, Text, StatusBar } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import * as Animatable from "react-native-animatable"
+import * as Progress from "react-native-progress";
+import { useNavigation } from '@react-navigation/native';
 
 
 const PreparingOrderScreen = () => {
+
+  const navigation = useNavigation();
+
+  useEffect(()=>{
+      setTimeout(()=>{
+        navigation.navigate("Delivery");
+      },6000)
+  },[])
+
   return (
     <>
     <StatusBar backgroundColor={'#00CCBB'} barStyle={'dark-content'}/>
@@ -22,6 +33,7 @@ const PreparingOrderScreen = () => {
       > 
       Waiting for restaurant to accept your order!
         </Animatable.Text>
+        <Progress.Circle size={60} indeterminate={true} color="white"/>
     </View>
     </>
   )

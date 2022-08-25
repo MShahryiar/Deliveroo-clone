@@ -5,6 +5,7 @@ import Home from './screens/Home';
 import RestaurantScreen from './screens/RestaurantScreen';
 import BasketScreen from './screens/BasketScreen';
 import PreparingOrderScreen from "./screens/PreparingOrderScreen";
+import DeliveryScreen  from "./screens/DeliveryScreen";
 import { Provider } from "react-redux";
 import { store } from "./store";
 
@@ -24,6 +25,9 @@ export default function App() {
                 options={{headerShown:false}}
               />
               <Stack.Screen name='Prepare' component={PreparingOrderScreen}
+              options={{headerShown:false}}
+              />
+              <Stack.Screen name='Delivery' component={DeliveryScreen}
               options={{headerShown:false}}
               />
             </Stack.Navigator>
