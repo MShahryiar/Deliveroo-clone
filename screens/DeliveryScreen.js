@@ -63,6 +63,25 @@ const DeliveryScreen = () => {
       </MapView>
 
     </View>
+    <View class="flex-row bg-white items-center space-x-5 h-28">
+          
+          <View className=" flex-row justify-between px-5 py-4 items-center bg-white">
+          <Image
+            source={{
+              uri:"https://links.papareact.com/wru"
+            }}
+            className="h-10 space-x-4 bg-white w-10"
+          />
+            <View className="flex-1 ml-3">
+              <Text className="text-lg">Shahryiar</Text>
+              <Text className="text-gray-500 ">Your Rider</Text>
+              </View>
+              <View>
+            <TouchableOpacity ><Text className="font-bold text-[#00CCBB]">Call</Text></TouchableOpacity>
+          </View>
+          </View>
+          
+    </View>
     </>
   )
 }
