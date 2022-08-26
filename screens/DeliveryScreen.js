@@ -52,7 +52,7 @@ const DeliveryScreen = () => {
       >
         <Marker
           coordinate={{
-            latitute:restaurant.lat,
+            latitude:restaurant.lat,
             longitude:restaurant.long,
           }}
           title={restaurant.title}
